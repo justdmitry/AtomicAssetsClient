@@ -15,18 +15,17 @@ namespace AtomicAssetsClient.Data
 
         public bool AllowNotify { get; set; }
 
-        public string[] AuthorizedAccounts { get; set; }
+        public string[]? AuthorizedAccounts { get; set; }
 
-        public string[] NotifyAccounts { get; set; }
+        public string[]? NotifyAccounts { get; set; }
 
         public decimal MarketFee { get; set; }
 
-        public Dictionary<string, string> Data { get; set; }
+        public Dictionary<string, string>? Data { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }
 
         public long CreatedAtBlock { get; set; }
-
     }
 }

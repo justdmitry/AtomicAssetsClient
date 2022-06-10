@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicAssetsClient", "AtomicAssetsClient\AtomicAssetsClient.csproj", "{B21E7063-E528-4933-B57E-B0399B68E776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtomicAssetsClient", "AtomicAssetsClient\AtomicAssetsClient.csproj", "{B21E7063-E528-4933-B57E-B0399B68E776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicAssetsClient.Demo", "AtomicAssetsClient.Demo\AtomicAssetsClient.Demo.csproj", "{9342AB17-142D-424C-AFD5-42A30B9E8309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtomicAssetsClient.Demo", "AtomicAssetsClient.Demo\AtomicAssetsClient.Demo.csproj", "{9342AB17-142D-424C-AFD5-42A30B9E8309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicAssetsClient.Tests", "AtomicAssetsClient.Tests\AtomicAssetsClient.Tests.csproj", "{25488CAB-B1AD-4A92-9CBA-6E5E16681086}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9342AB17-142D-424C-AFD5-42A30B9E8309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9342AB17-142D-424C-AFD5-42A30B9E8309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9342AB17-142D-424C-AFD5-42A30B9E8309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25488CAB-B1AD-4A92-9CBA-6E5E16681086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25488CAB-B1AD-4A92-9CBA-6E5E16681086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25488CAB-B1AD-4A92-9CBA-6E5E16681086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25488CAB-B1AD-4A92-9CBA-6E5E16681086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

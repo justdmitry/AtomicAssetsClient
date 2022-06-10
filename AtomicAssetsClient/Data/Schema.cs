@@ -9,7 +9,7 @@ namespace AtomicAssetsClient.Data
 
         public string SchemaName { get; set; } = string.Empty;
 
-        public Collection Collection { get; set; }
+        public Collection? Collection { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }

@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GetAsset" xml:space="preserve">
+    <value>{
+  "success": true,
+  "data": {
+    "contract": "atomicassets",
+    "asset_id": "1099511627776",
+    "owner": "intqi.wam",
+    "is_transferable": true,
+    "is_burnable": true,
+    "collection": {
+      "collection_name": "atomic",
+      "name": "Official AtomicAssets",
+      "img": "QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH",
+      "author": "atomic",
+      "allow_notify": true,
+      "authorized_accounts": [
+        "atomic"
+      ],
+      "notify_accounts": [],
+      "market_fee": 0,
+      "created_at_block": "64105831",
+      "created_at_time": "1593482154500"
+    },
+    "schema": {
+      "schema_name": "awards",
+      "format": [
+        {          "name": "name",          "type": "string"        },
+        {          "name": "img",          "type": "ipfs"        },
+        {          "name": "mint",          "type": "uint64"        },
+        {          "name": "description",          "type": "string"        }
+      ],
+      "created_at_block": "64105836",
+      "created_at_time": "1593482157000"
+    },
+    "template": {
+      "template_id": "1",
+      "max_supply": "154",
+      "is_transferable": true,
+      "is_burnable": true,
+      "issued_supply": "154",
+      "immutable_data": {
+        "img": "QmdBsZtZDWdeqMuRnAXtHnD4qKcnSYvhqLhmug28rEcpkS",
+        "name": "Atomic Beta Award",
+        "description": "This award was issued to those that joined the AtomicAssets Telegram channel before the official launch on the 30.06.2020"
+      },
+      "created_at_time": "1593482239500",
+      "created_at_block": "64106001"
+    },
+    "mutable_data": {},
+    "immutable_data": {
+      "mint": "1"
+    },
+    "template_mint": "1",
+    "backed_tokens": [],
+    "burned_by_account": null,
+    "burned_at_block": null,
+    "burned_at_time": null,
+    "updated_at_block": "88106238",
+    "updated_at_time": "1605486020000",
+    "transferred_at_block": "88106238",
+    "transferred_at_time": "1605486020000",
+    "minted_at_block": "64106003",
+    "minted_at_time": "1593482240500",
+    "data": {
+      "mint": "1",
+      "img": "QmdBsZtZDWdeqMuRnAXtHnD4qKcnSYvhqLhmug28rEcpkS",
+      "name": "Atomic Beta Award",
+      "description": "This award was issued to those that joined the AtomicAssets Telegram channel before the official launch on the 30.06.2020"
+    },
+    "name": "Atomic Beta Award"
+  },
+  "query_time": 1654898628512
+}</value>
+  </data>
+  <data name="GetCollection" xml:space="preserve">
+    <value>{
+  "success": true,
+  "data": {
+    "contract": "atomicassets",
+    "collection_name": "atomic",
+    "name": "Official AtomicAssets",
+    "img": "QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH",
+    "author": "atomic",
+    "allow_notify": true,
+    "authorized_accounts": [
+      "atomic"
+    ],
+    "notify_accounts": [ "test1", "test2" ],
+    "market_fee": 0.12,
+    "data": {
+      "img": "QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH",
+      "url": "https://atomicassets.io/",
+      "name": "Official AtomicAssets",
+      "description": "Assets created by the AtomicAssets developers"
+    },
+    "created_at_time": "1593482154500",
+    "created_at_block": "64105831"
+  },
+  "query_time": 1654894656969
+}</value>
+  </data>
+  <data name="GetSchema" xml:space="preserve">
+    <value>{
+  "success": true,
+  "data": {
+    "contract": "atomicassets",
+    "schema_name": "awards",
+    "format": [
+      {        "name": "name",        "type": "string"      },
+      {        "name": "img",        "type": "ipfs"      },
+      {        "name": "mint",        "type": "uint64"      },
+      {        "name": "description",        "type": "string"      }
+    ],
+    "collection": {
+      "collection_name": "atomic",
+      "name": "Official AtomicAssets",
+      "img": "QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH",
+      "author": "atomic",
+      "allow_notify": true,
+      "authorized_accounts": [
+        "atomic"
+      ],
+      "notify_accounts": [],
+      "market_fee": 0,
+      "created_at_block": "64105831",
+      "created_at_time": "1593482154500"
+    },
+    "created_at_time": "1593482157000",
+    "created_at_block": "64105836"
+  },
+  "query_time": 1654895610573
+}</value>
+  </data>
+  <data name="GetTemplate" xml:space="preserve">
+    <value>{
+  "success": true,
+  "data": {
+    "contract": "atomicassets",
+    "template_id": "1",
+    "is_transferable": true,
+    "is_burnable": true,
+    "issued_supply": "154",
+    "max_supply": "1540",
+    "collection": {
+      "collection_name": "atomic",
+      "name": "Official AtomicAssets",
+      "img": "QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH",
+      "author": "atomic",
+      "allow_notify": true,
+      "authorized_accounts": [
+        "atomic"
+      ],
+      "notify_accounts": [],
+      "market_fee": 0,
+      "created_at_block": "64105831",
+      "created_at_time": "1593482154500"
+    },
+    "schema": {
+      "schema_name": "awards",
+      "format": [
+        {          "name": "name",          "type": "string"        },
+        {          "name": "img",          "type": "ipfs"        },
+        {          "name": "mint",          "type": "uint64"        },
+        {          "name": "description",          "type": "string"        }
+      ],
+      "created_at_block": "64105836",
+      "created_at_time": "1593482157000"
+    },
+    "immutable_data": {
+      "img": "QmdBsZtZDWdeqMuRnAXtHnD4qKcnSYvhqLhmug28rEcpkS",
+      "name": "Atomic Beta Award",
+      "description": "This award was issued to those that joined the AtomicAssets Telegram channel before the official launch on the 30.06.2020"
+    },
+    "created_at_time": "1593482239500",
+    "created_at_block": "64106001",
+    "name": "Atomic Beta Award"
+  },
+  "query_time": 1654896108506
+}</value>
+  </data>
+</root>

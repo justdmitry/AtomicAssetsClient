@@ -5,7 +5,16 @@ namespace AtomicAssetsClient
 {
     public interface IClient
     {
-        Task<Template> GetTemplate(string collection, int templateId);
-        Task<List<Template>> GetTemplates(string? collection = null, int maxPages = 0);
+        Task<Asset> GetAsset(long assetId);
+        Task<List<Asset>> GetAssets(int templateId, int maxPages = 0);
+
+        Task<Collection> GetCollection(string collectionName);
+
+        Task<Schema> GetSchema(string collectionName, string schemaName);
+        Task<List<Schema>> GetSchemas(string collectionName);
+
+        Task<Template> GetTemplate(string collectionName, int templateId);
+        Task<List<Template>> GetTemplates(string? collectionName = null, int maxPages = 0);
+        Task<List<Template>> GetTemplates(params int[] templateIds);
     }
 }
