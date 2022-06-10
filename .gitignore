@@ -1,0 +1,11 @@
+/.vs
+*.user
+bin
+obj
+log
+*.litedb
+*.sqlite
+/webapp/wwwroot/thumb
+/wax-contract/*.abi
+/wax-contract/*.wasm
+/wax-contract/**.pass
