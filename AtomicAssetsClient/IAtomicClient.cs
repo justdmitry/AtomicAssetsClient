@@ -3,7 +3,7 @@ using AtomicAssetsClient.Data;
 
 namespace AtomicAssetsClient
 {
-    public interface IClient
+    public interface IAtomicClient
     {
         Task<Asset> GetAsset(long assetId);
         Task<List<Asset>> GetAssets(int templateId, int maxPages = 0);

@@ -25,11 +25,11 @@ namespace AtomicAssetsClient.Data
 
         public int TemplateMint { get; set; }
 
-        public Dictionary<string, string>? MutableData { get; set; }
+        public Dictionary<string, object>? MutableData { get; set; }
 
-        public Dictionary<string, string>? ImmutableData { get; set; }
+        public Dictionary<string, object>? ImmutableData { get; set; }
 
-        public Dictionary<string, string>? Data { get; set; }
+        public Dictionary<string, object>? Data { get; set; }
 
         public string? BurnedByAccount { get; set; }
 

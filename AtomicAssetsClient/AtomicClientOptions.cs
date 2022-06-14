@@ -3,7 +3,7 @@
     using System;
     using System.Text.Json;
 
-    public class ClientOptions
+    public class AtomicClientOptions
     {
         public Uri Endpoint { get; set; } = new Uri("https://wax.api.atomicassets.io/");
 

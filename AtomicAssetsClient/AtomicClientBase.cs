@@ -10,17 +10,17 @@
     using AtomicAssetsClient.Data;
     using Microsoft.Extensions.Logging;
 
-    public abstract class ClientBase
+    public abstract class AtomicClientBase
     {
         private readonly ILogger logger;
-        private readonly ClientOptions options;
+        private readonly AtomicClientOptions options;
         private readonly HttpClient httpClient;
 
         private readonly SemaphoreSlim syncObject = new SemaphoreSlim(1);
 
         private DateTimeOffset sleepTill = DateTimeOffset.MinValue;
 
-        protected ClientBase(ILogger logger, ClientOptions options, HttpClient httpClient)
+        protected AtomicClientBase(ILogger logger, AtomicClientOptions options, HttpClient httpClient)
         {
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.options = options ?? throw new ArgumentNullException(nameof(options));

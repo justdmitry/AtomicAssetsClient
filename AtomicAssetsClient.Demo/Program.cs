@@ -9,8 +9,8 @@ var builder = Host.CreateDefaultBuilder(args);
 builder.ConfigureLogging(l => l.AddSystemdConsole());
 builder.ConfigureServices(services =>
 {
-    services.AddOptions<ClientOptions>();
-    services.AddHttpClient<IClient, Client>();
+    services.AddOptions<AtomicClientOptions>();
+    services.AddHttpClient<IAtomicClient, AtomicClient>();
     services.AddHostedService<DemoService>();
 });
 

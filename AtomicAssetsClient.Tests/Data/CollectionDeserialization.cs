@@ -5,7 +5,7 @@
         [Fact]
         public void Test()
         {
-            var opts = new ClientOptions();
+            var opts = new AtomicClientOptions();
             var obj = System.Text.Json.JsonSerializer.Deserialize<AtomicResponse<Collection>>(Samples.GetCollection, opts.JsonOptions);
 
             Assert.NotNull(obj);

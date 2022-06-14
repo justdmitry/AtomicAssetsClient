@@ -23,7 +23,7 @@ namespace AtomicAssetsClient.Data
 
         public Schema? Schema { get; set; }
 
-        public Dictionary<string, string>? ImmutableData { get; set; }
+        public Dictionary<string, object>? ImmutableData { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }

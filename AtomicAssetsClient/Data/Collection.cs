@@ -21,7 +21,7 @@ namespace AtomicAssetsClient.Data
 
         public decimal MarketFee { get; set; }
 
-        public Dictionary<string, string>? Data { get; set; }
+        public Dictionary<string, object>? Data { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }

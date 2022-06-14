@@ -7,9 +7,9 @@ namespace AtomicAssetsClient.Demo
     public class DemoService : IHostedService
     {
         private readonly ILogger logger;
-        private readonly IClient client;
+        private readonly IAtomicClient client;
 
-        public DemoService(ILogger<DemoService> logger, IClient client)
+        public DemoService(ILogger<DemoService> logger, IAtomicClient client)
         {
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.client = client ?? throw new ArgumentNullException(nameof(client));

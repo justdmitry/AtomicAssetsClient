@@ -8,9 +8,9 @@
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
 
-    public class Client : ClientBase, IClient
+    public class AtomicClient : AtomicClientBase, IAtomicClient
     {
-        public Client(ILogger<Client> logger, IOptions<ClientOptions> options, HttpClient httpClient)
+        public AtomicClient(ILogger<AtomicClient> logger, IOptions<AtomicClientOptions> options, HttpClient httpClient)
             : base(logger, options.Value, httpClient)
         {
             // Nothing
