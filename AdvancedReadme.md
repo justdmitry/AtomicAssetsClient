@@ -3,7 +3,7 @@
 ## Configure HttpClient
 
 AtomicClient requests named instance from HttpClientFactory, 
-so configure than named instance:
+so configure that named instance:
 
 ```csharp
 services.AddHttpClient(new AtomicClientOptions().HttpClientName).ConfigureHttpClient(...)
