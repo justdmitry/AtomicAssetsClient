@@ -31,7 +31,7 @@
             Assert.Equal(1, item.Template.TemplateId);
 
             Assert.NotNull(item.ImmutableData);
-            Assert.Equal("1", item.ImmutableData["mint"]);
+            Assert.Equal("1", item.ImmutableData["mint"].GetString());
 
             Assert.Equal(1, item.TemplateMint);
 

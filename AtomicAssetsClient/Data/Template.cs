@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using AtomicAssetsClient.Utils;
 
 namespace AtomicAssetsClient.Data
@@ -23,7 +24,7 @@ namespace AtomicAssetsClient.Data
 
         public Schema? Schema { get; set; }
 
-        public Dictionary<string, object>? ImmutableData { get; set; }
+        public Dictionary<string, JsonElement>? ImmutableData { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }

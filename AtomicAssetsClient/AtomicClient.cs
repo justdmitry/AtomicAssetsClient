@@ -13,8 +13,8 @@
 
     public class AtomicClient : AtomicClientBase, IAtomicClient
     {
-        public AtomicClient(ILogger<AtomicClient> logger, IOptions<AtomicClientOptions> options, HttpClient httpClient)
-            : base(logger, options.Value, httpClient)
+        public AtomicClient(ILogger<AtomicClient> logger, IOptions<AtomicClientOptions> options, IHttpClientFactory httpClientFactory)
+            : base(logger, options.Value, httpClientFactory)
         {
             // Nothing
         }

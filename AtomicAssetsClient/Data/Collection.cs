@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using AtomicAssetsClient.Utils;
 
 namespace AtomicAssetsClient.Data
@@ -21,7 +22,7 @@ namespace AtomicAssetsClient.Data
 
         public decimal MarketFee { get; set; }
 
-        public Dictionary<string, object>? Data { get; set; }
+        public Dictionary<string, JsonElement>? Data { get; set; }
 
         [JsonConverter(typeof(TimeJsonConverter))]
         public DateTimeOffset CreatedAtTime { get; set; }

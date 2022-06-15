@@ -26,10 +26,10 @@
             Assert.Equal(64105831, item.CreatedAtBlock);
 
             Assert.NotNull(item.Data);
-            Assert.Equal("QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH", item.Data["img"]);
-            Assert.Equal("https://atomicassets.io/", item.Data["url"]);
-            Assert.Equal("Official AtomicAssets", item.Data["name"]);
-            Assert.Equal("Assets created by the AtomicAssets developers", item.Data["description"]);
+            Assert.Equal("QmYeWdTRTEePZasagQaT4UkuRbfe1sPvyw47PZrroba9tH", item.Data["img"].GetString());
+            Assert.Equal("https://atomicassets.io/", item.Data["url"].GetString());
+            Assert.Equal("Official AtomicAssets", item.Data["name"].GetString());
+            Assert.Equal("Assets created by the AtomicAssets developers", item.Data["description"].GetString());
         }
     }
 }

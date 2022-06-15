@@ -14,19 +14,17 @@
     {
         private readonly ILogger logger;
         private readonly AtomicClientOptions options;
-        private readonly HttpClient httpClient;
+        private readonly IHttpClientFactory httpClientFactory;
 
         private readonly SemaphoreSlim syncObject = new SemaphoreSlim(1);
 
         private DateTimeOffset sleepTill = DateTimeOffset.MinValue;
 
-        protected AtomicClientBase(ILogger logger, AtomicClientOptions options, HttpClient httpClient)
+        protected AtomicClientBase(ILogger logger, AtomicClientOptions options, IHttpClientFactory httpClientFactory)
         {
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.options = options ?? throw new ArgumentNullException(nameof(options));
-            this.httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
-
-            this.httpClient.BaseAddress = this.options.Endpoint;
+            this.httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
         }
 
         protected async Task<List<T>> ExecuteGetListRequest<T>(string baseUri, int maxPages)
@@ -121,6 +119,9 @@
 
         protected async Task<(T data, HttpResponseHeaders headers)> ExecuteRequestSafe<T>(HttpRequestMessage request)
         {
+            using var httpClient = httpClientFactory.CreateClient(options.HttpClientName);
+            httpClient.BaseAddress = options.Endpoint;
+
             using var resp = await httpClient.SendAsync(request).ConfigureAwait(false);
 
             var respText = await resp.Content.ReadAsStringAsync().ConfigureAwait(false);

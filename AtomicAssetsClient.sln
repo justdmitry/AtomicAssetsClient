@@ -7,7 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtomicAssetsClient", "Atomi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtomicAssetsClient.Demo", "AtomicAssetsClient.Demo\AtomicAssetsClient.Demo.csproj", "{9342AB17-142D-424C-AFD5-42A30B9E8309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomicAssetsClient.Tests", "AtomicAssetsClient.Tests\AtomicAssetsClient.Tests.csproj", "{25488CAB-B1AD-4A92-9CBA-6E5E16681086}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtomicAssetsClient.Tests", "AtomicAssetsClient.Tests\AtomicAssetsClient.Tests.csproj", "{25488CAB-B1AD-4A92-9CBA-6E5E16681086}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{063F3485-02A7-40C6-A8FD-582060D3A0F1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		AdvancedReadme.md = AdvancedReadme.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

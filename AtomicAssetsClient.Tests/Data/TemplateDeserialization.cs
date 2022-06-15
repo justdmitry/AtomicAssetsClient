@@ -32,9 +32,9 @@
             Assert.Equal(64106001, item.CreatedAtBlock);
 
             Assert.NotNull(item.ImmutableData);
-            Assert.Equal("QmdBsZtZDWdeqMuRnAXtHnD4qKcnSYvhqLhmug28rEcpkS", item.ImmutableData["img"]);
-            Assert.Equal("Atomic Beta Award", item.ImmutableData["name"]);
-            Assert.Equal("This award was issued to those that joined the AtomicAssets Telegram channel before the official launch on the 30.06.2020", item.ImmutableData["description"]);
+            Assert.Equal("QmdBsZtZDWdeqMuRnAXtHnD4qKcnSYvhqLhmug28rEcpkS", item.ImmutableData["img"].GetString());
+            Assert.Equal("Atomic Beta Award", item.ImmutableData["name"].GetString());
+            Assert.Equal("This award was issued to those that joined the AtomicAssets Telegram channel before the official launch on the 30.06.2020", item.ImmutableData["description"].GetString());
         }
     }
 }

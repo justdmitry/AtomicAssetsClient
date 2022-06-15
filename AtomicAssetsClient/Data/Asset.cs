@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using AtomicAssetsClient.Utils;
 
 namespace AtomicAssetsClient.Data
@@ -25,11 +26,11 @@ namespace AtomicAssetsClient.Data
 
         public int TemplateMint { get; set; }
 
-        public Dictionary<string, object>? MutableData { get; set; }
+        public Dictionary<string, JsonElement>? MutableData { get; set; }
 
-        public Dictionary<string, object>? ImmutableData { get; set; }
+        public Dictionary<string, JsonElement>? ImmutableData { get; set; }
 
-        public Dictionary<string, object>? Data { get; set; }
+        public Dictionary<string, JsonElement>? Data { get; set; }
 
         public string? BurnedByAccount { get; set; }
 
