@@ -17,7 +17,16 @@ namespace AtomicAssetsClient.Demo
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            var templates = await client.GetTemplates(null, 2).ConfigureAwait(false);
+            var collection = await client.GetCollection("atomic").ConfigureAwait(false);
+            logger.LogInformation("Collection '{Name}' ({FullName}) created by '{Author}' at block {Block}", collection.CollectionName, collection.Name, collection.Author, collection.CreatedAtBlock);
+
+            collection = await client.GetCollectionOrDefault("not-exist").ConfigureAwait(false);
+            if (collection == null)
+            {
+                logger.LogInformation("Collection 'not-exist' does not exist");
+            }
+
+            var templates = await client.GetTemplates(maxPages: 2).ConfigureAwait(false);
 
             foreach(var t in templates)
             {

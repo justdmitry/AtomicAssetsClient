@@ -37,7 +37,7 @@
             while(true)
             {
                 page++;
-                var uri = baseUri + (baseUri.Contains('?') ? "&page=" : "?page=") + page;
+                var uri = baseUri + (baseUri.Contains('?') ? "&" : "?") + "limit=" + options.PageSize + "&page=" + page;
                 var items = await ExecuteGetRequest<List<T>>(uri).ConfigureAwait(false);
 
                 if (items.Count == 0)
@@ -46,6 +46,11 @@
                 }
 
                 res.AddRange(items);
+
+                if (items.Count < options.PageSize)
+                {
+                    break;
+                }
 
                 if (maxPages > 0 && page >= maxPages)
                 {
@@ -130,11 +135,18 @@
 
             var data = System.Text.Json.JsonSerializer.Deserialize<AtomicResponse<T>>(respText, options.JsonOptions);
 
-            if (data == null || !data.Success)
+            if (data == null || data.Success == null)
             {
                 logger.LogDebug("Request:  {Method} {Uri}", request.Method, request.RequestUri);
                 logger.LogDebug("Response:\r\n{Text}", respText.SubstringSafe(200));
                 throw new HttpRequestException("API call failed");
+            }
+
+            if (data.Success != true || data.Data == null)
+            {
+                logger.LogDebug("Request:  {Method} {Uri}", request.Method, request.RequestUri);
+                logger.LogDebug("Response:\r\n{Text}", respText.SubstringSafe(200));
+                throw new HttpRequestException("API call failed: " + data.Message);
             }
 
             return (data.Data, resp.Headers);
