@@ -355,9 +355,18 @@
                 sb.Append('&');
                 sb.Append(paramName);
                 sb.Append('=');
+                var first = true;
                 foreach (var val in values)
                 {
-                    sb.Append(',');
+                    if (first)
+                    {
+                        first = false;
+                    }
+                    else
+                    {
+                        sb.Append(',');
+                    }
+
                     sb.Append(val);
                 }
             }
@@ -370,9 +379,18 @@
                 sb.Append('&');
                 sb.Append(paramName);
                 sb.Append('=');
+                var first = true;
                 foreach (var val in values)
                 {
-                    sb.Append(',');
+                    if (first)
+                    {
+                        first = false;
+                    }
+                    else
+                    {
+                        sb.Append(',');
+                    }
+
                     sb.Append(val.ToString(CultureInfo.InvariantCulture));
                 }
             }
@@ -385,9 +403,18 @@
                 sb.Append('&');
                 sb.Append(paramName);
                 sb.Append('=');
+                var first = true;
                 foreach (var val in values)
                 {
-                    sb.Append(',');
+                    if (first)
+                    {
+                        first = false;
+                    }
+                    else
+                    {
+                        sb.Append(',');
+                    }
+
                     sb.Append(val.ToString(CultureInfo.InvariantCulture));
                 }
             }
