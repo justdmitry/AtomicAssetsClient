@@ -16,9 +16,12 @@
 
         public class BurnedByTemplateItem
         {
-            public int TemplateId { get; set; }
+            /// <summary>
+            /// Surprise! Should't, but can be null! E.g. in `byronartset1` collection.
+            /// </summary>
+            public int? TemplateId { get; set; }
 
-            public long Burned { get; set; }
+            public int Burned { get; set; }
         }
 
         public class BurnedBySchemaItem

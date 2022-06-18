@@ -2,8 +2,8 @@
 {
     public class TemplateStats
     {
-        public long Assets { get; set; }
+        public int Assets { get; set; }
 
-        public long Burned { get; set; }
+        public int Burned { get; set; }
     }
 }

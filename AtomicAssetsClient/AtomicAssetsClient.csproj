@@ -11,7 +11,7 @@
     <PackageTags>atomichub, atomicassets, wax, nft, api, client</PackageTags>
     <Copyright>Copyright © Dmitry Popov, 2022</Copyright>
     <Authors>just_dmitry</Authors>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <Description>REST API client for AtomicHub NFT marketplace (AtomicAssets).</Description>
     <PackageReleaseNotes>Added: GetCollectionStats, GetSchemaStats, GetTemplateStats.</PackageReleaseNotes>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
