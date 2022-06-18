@@ -182,6 +182,18 @@
         }
 
         /// <inheritdoc>
+        public Task<CollectionStats> GetCollectionStats(string collectionName)
+        {
+            if (string.IsNullOrEmpty(collectionName))
+            {
+                throw new ArgumentNullException(nameof(collectionName));
+            }
+
+            var uri = $"/atomicassets/v1/collections/{collectionName}/stats";
+            return ExecuteGetRequest<CollectionStats>(uri);
+        }
+
+        /// <inheritdoc>
         public Task<Schema> GetSchema(string collectionName, string schemaName)
         {
             if (string.IsNullOrEmpty(collectionName))
@@ -250,6 +262,23 @@
             }
 
             return ExecuteGetListRequest<Schema>(sb.ToString(), maxPages);
+        }
+
+        /// <inheritdoc>
+        public Task<SchemaStats> GetSchemaStats(string collectionName, string schemaName)
+        {
+            if (string.IsNullOrEmpty(collectionName))
+            {
+                throw new ArgumentNullException(nameof(collectionName));
+            }
+
+            if (string.IsNullOrEmpty(schemaName))
+            {
+                throw new ArgumentNullException(nameof(schemaName));
+            }
+
+            var uri = $"/atomicassets/v1/schemas/{collectionName}/{schemaName}/stats";
+            return ExecuteGetRequest<SchemaStats>(uri);
         }
 
         /// <inheritdoc>
@@ -335,6 +364,23 @@
             }
 
             return ExecuteGetListRequest<Template>(sb.ToString(), maxPages);
+        }
+
+        /// <inheritdoc>
+        public Task<TemplateStats> GetTemplateStats(string collectionName, int templateId)
+        {
+            if (string.IsNullOrEmpty(collectionName))
+            {
+                throw new ArgumentNullException(nameof(collectionName));
+            }
+
+            if (templateId <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(templateId), "Must be positive");
+            }
+
+            var uri = $"/atomicassets/v1/templates/{collectionName}/{templateId}/stats";
+            return ExecuteGetRequest<TemplateStats>(uri);
         }
 
         private static void AppendIfNotEmptyOrWhitespace(StringBuilder sb, string? value, [CallerArgumentExpression("value")] string? paramName = null)

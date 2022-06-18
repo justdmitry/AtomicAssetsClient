@@ -116,6 +116,13 @@ namespace AtomicAssetsClient
             int maxPages = 0);
 
         /// <summary>
+        /// Get stats about collection.
+        /// </summary>
+        /// <param name="collectionName">Name of collection.</param>
+        /// <returns><see cref="CollectionStats"/> instance.</returns>
+        Task<CollectionStats> GetCollectionStats(string collectionName);
+
+        /// <summary>
         /// Find schema by schema name and collection name. Throws exception if not found.
         /// </summary>
         /// <param name="collectionName">Collection name of schema.</param>
@@ -157,6 +164,14 @@ namespace AtomicAssetsClient
             string? order = "asc",
             string? sort = "created",
             int maxPages = 0);
+
+        /// <summary>
+        /// Get stats about a specific schema.
+        /// </summary>
+        /// <param name="collectionName">Collection name of schema.</param>
+        /// <param name="schemaName">Name of schema.</param>
+        /// <returns><see cref="SchemaStats"/> instance.</returns>
+        Task<SchemaStats> GetSchemaStats(string collectionName, string schemaName);
 
         /// <summary>
         /// Find template by id. Throws exception if not found.
@@ -214,5 +229,13 @@ namespace AtomicAssetsClient
             string? order = "asc",
             string? sort = "created",
             int maxPages = 0);
+
+        /// <summary>
+        /// Get stats about a specific template.
+        /// </summary>
+        /// <param name="collectionName">Name of collection.</param>
+        /// <param name="templateId">ID of template.</param>
+        /// <returns><see cref="TemplateStats"/> instance.</returns>
+        Task<TemplateStats> GetTemplateStats(string collectionName, int templateId);
     }
 }
