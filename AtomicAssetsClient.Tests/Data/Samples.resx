@@ -218,6 +218,214 @@
   "query_time": 1654894656969
 }</value>
   </data>
+  <data name="GetSale" xml:space="preserve">
+    <value>{
+  "success": true,
+  "data": {
+    "market_contract": "atomicmarket",
+    "assets_contract": "atomicassets",
+    "sale_id": "123456",
+    "seller": "jnxau.wam",
+    "buyer": "test-test",
+    "offer_id": "125012",
+    "price": {
+      "token_contract": "eosio.token",
+      "token_symbol": "WAX",
+      "token_precision": 8,
+      "median": null,
+      "amount": "60000000000"
+    },
+    "listing_price": "60000000000",
+    "listing_symbol": "WAX",
+    "assets": [
+      {
+        "contract": "atomicassets",
+        "asset_id": "1099511859709",
+        "owner": "tubes.kogs",
+        "is_transferable": true,
+        "is_burnable": false,
+        "collection": {
+          "collection_name": "kogsofficial",
+          "name": "KOGs",
+          "img": "QmevTY5uNVMFDxiDVmwk4rRcwkRcrWmkHD9s8Wh1kJiMmH",
+          "author": "kogsofficial",
+          "allow_notify": true,
+          "authorized_accounts": [
+            "kogsofficial",
+            "kogspack1111",
+            "atomicdropsx",
+            "atomicpoolsx",
+            "tubes.kogs",
+            "kogspools111",
+            "drops.kogs",
+            "kogsslamgame",
+            "setubes.kogs",
+            "stake.kogs"
+          ],
+          "notify_accounts": [
+            "tubes.kogs",
+            "setubes.kogs",
+            "stake.kogs"
+          ],
+          "market_fee": 0.06,
+          "created_at_block": "72279095",
+          "created_at_time": "1597570391500"
+        },
+        "schema": {
+          "schema_name": "1stedition",
+          "format": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "img",
+              "type": "image"
+            },
+            {
+              "name": "backimg",
+              "type": "image"
+            },
+            {
+              "name": "object",
+              "type": "string"
+            },
+            {
+              "name": "object_collection",
+              "type": "string"
+            },
+            {
+              "name": "object_number",
+              "type": "uint64"
+            },
+            {
+              "name": "rarity",
+              "type": "string"
+            },
+            {
+              "name": "foil",
+              "type": "bool"
+            },
+            {
+              "name": "border_color",
+              "type": "string"
+            },
+            {
+              "name": "border_type",
+              "type": "uint64"
+            }
+          ],
+          "created_at_block": "72527864",
+          "created_at_time": "1597694776000"
+        },
+        "template": {
+          "template_id": "11582",
+          "max_supply": "0",
+          "is_transferable": true,
+          "is_burnable": false,
+          "issued_supply": "35",
+          "immutable_data": {
+            "img": "QmcXVuHRS69fva9casTYdH14zfLscrBCvX7KWhSxm3DYZk/Kog/no_foil/ultra_rare/4-51-16-4-0_front.png",
+            "foil": 0,
+            "name": "Arcade",
+            "object": "Kog",
+            "rarity": "ultra rare",
+            "backimg": "QmcXVuHRS69fva9casTYdH14zfLscrBCvX7KWhSxm3DYZk/Kog/no_foil/ultra_rare/4-51-16-4-0_back.png",
+            "border_type": "4",
+            "border_color": "Console Gray",
+            "object_number": "51",
+            "object_collection": "80s"
+          },
+          "created_at_time": "1597695816000",
+          "created_at_block": "72529944"
+        },
+        "mutable_data": {},
+        "immutable_data": {},
+        "template_mint": "9",
+        "backed_tokens": [],
+        "burned_by_account": null,
+        "burned_at_block": null,
+        "burned_at_time": null,
+        "updated_at_block": "101549627",
+        "updated_at_time": "1612209598500",
+        "transferred_at_block": "101549627",
+        "transferred_at_time": "1612209598500",
+        "minted_at_block": "72728675",
+        "minted_at_time": "1597795185500",
+        "sales": [],
+        "auctions": [],
+        "prices": [
+          {
+            "market_contract": "atomicmarket",
+            "token": {
+              "token_symbol": "WAX",
+              "token_precision": 8,
+              "token_contract": "eosio.token"
+            },
+            "median": "45000000000",
+            "average": "58595080570",
+            "suggested_median": "43856000000",
+            "suggested_average": "43856000000",
+            "min": "3695491500",
+            "max": "185000000000",
+            "sales": "17"
+          }
+        ],
+        "data": {
+          "img": "QmcXVuHRS69fva9casTYdH14zfLscrBCvX7KWhSxm3DYZk/Kog/no_foil/ultra_rare/4-51-16-4-0_front.png",
+          "foil": 0,
+          "name": "Arcade",
+          "object": "Kog",
+          "rarity": "ultra rare",
+          "backimg": "QmcXVuHRS69fva9casTYdH14zfLscrBCvX7KWhSxm3DYZk/Kog/no_foil/ultra_rare/4-51-16-4-0_back.png",
+          "border_type": "4",
+          "border_color": "Console Gray",
+          "object_number": "51",
+          "object_collection": "80s"
+        },
+        "name": "Arcade"
+      }
+    ],
+    "maker_marketplace": "test1",
+    "taker_marketplace": "test2",
+    "collection_name": "kogsofficial",
+    "collection": {
+      "collection_name": "kogsofficial",
+      "name": "KOGs",
+      "img": "QmevTY5uNVMFDxiDVmwk4rRcwkRcrWmkHD9s8Wh1kJiMmH",
+      "author": "kogsofficial",
+      "allow_notify": true,
+      "authorized_accounts": [
+        "kogsofficial",
+        "kogspack1111",
+        "atomicdropsx",
+        "atomicpoolsx",
+        "tubes.kogs",
+        "kogspools111",
+        "drops.kogs",
+        "kogsslamgame",
+        "setubes.kogs",
+        "stake.kogs"
+      ],
+      "notify_accounts": [
+        "tubes.kogs",
+        "setubes.kogs",
+        "stake.kogs"
+      ],
+      "market_fee": 0.08,
+      "created_at_block": "72279095",
+      "created_at_time": "1597570391500"
+    },
+    "is_seller_contract": false,
+    "updated_at_block": "72804734",
+    "updated_at_time": "1597833215000",
+    "created_at_block": "72767728",
+    "created_at_time": "1597814712000",
+    "state": 2
+  },
+  "query_time": 1655752353932
+}</value>
+  </data>
   <data name="GetSchema" xml:space="preserve">
     <value>{
   "success": true,

@@ -383,6 +383,200 @@
             return ExecuteGetRequest<TemplateStats>(uri);
         }
 
+        /// <inheritdoc>
+        public Task<Sale> GetSale(int saleId)
+        {
+            var uri = $"/atomicmarket/v1/sales/{saleId}";
+            return ExecuteGetRequest<Sale>(uri);
+        }
+
+        /// <inheritdoc>
+        public Task<List<Sale>> GetSales(
+            ICollection<int>? state = null,
+            int? maxAssets = null,
+            int? minAssets = null,
+            bool? showSellerContract = null,
+            ICollection<string>? contractWhitelist = null,
+            ICollection<string>? sellerBlacklist = null,
+            ICollection<string>? buyerBlacklist = null,
+            long? assetId = null,
+            ICollection<string>? marketplace = null,
+            ICollection<string>? makerMarketplace = null,
+            ICollection<string>? takerMarketplace = null,
+            string? symbol = null,
+            string? account = null,
+            ICollection<string>? seller = null,
+            ICollection<string>? buyer = null,
+            decimal? minPrice = null,
+            decimal? maxPrice = null,
+            int? minTemplateMint = null,
+            int? maxTemplateMint = null,
+            string? collectionName = null,
+            string? schemaName = null,
+            int? templateId = null,
+            bool? burned = null,
+            string? owner = null,
+            string? match = null,
+            string? search = null,
+            string? matchImmutableName = null,
+            string? matchMutableName = null,
+            bool? isTransferable = null,
+            bool? isBurnable = null,
+            ICollection<string>? collectionBlacklist = null,
+            ICollection<string>? collectionWhitelist = null,
+            ICollection<int>? ids = null,
+            int? lowerBound = null,
+            int? upperBound = null,
+            DateTimeOffset? before = null,
+            DateTimeOffset? after = null,
+            string? order = "desc",
+            string? sort = "created",
+            int maxPages = 0)
+        {
+            var sb = new StringBuilder("/atomicmarket/v2/sales?", 150);
+
+            AppendIfNotEmpty(sb, state);
+            AppendIfNotNull(sb, maxAssets, "max_assets");
+            AppendIfNotNull(sb, minAssets, "min_assets");
+            AppendIfNotNull(sb, showSellerContract, "show_seller_contracts");
+            AppendIfNotEmpty(sb, contractWhitelist, "contract_whitelist");
+            AppendIfNotEmpty(sb, sellerBlacklist, "seller_blacklist");
+            AppendIfNotEmpty(sb, buyerBlacklist, "buyer_blacklist");
+            AppendIfNotNull(sb, assetId, "asset_id");
+            AppendIfNotEmpty(sb, marketplace);
+            AppendIfNotEmpty(sb, makerMarketplace, "maker_marketplace");
+            AppendIfNotEmpty(sb, takerMarketplace, "taker_marketplace");
+            AppendIfNotEmptyOrWhitespace(sb, symbol);
+            AppendIfNotEmptyOrWhitespace(sb, account);
+            AppendIfNotEmpty(sb, seller);
+            AppendIfNotEmpty(sb, buyer);
+            AppendIfNotNull(sb, minPrice, "min_price");
+            AppendIfNotNull(sb, maxPrice, "max_price");
+            AppendIfNotNull(sb, minTemplateMint, "min_template_mint");
+            AppendIfNotNull(sb, maxTemplateMint, "max_template_mint");
+            AppendIfNotEmptyOrWhitespace(sb, collectionName, "collection_name");
+            AppendIfNotEmptyOrWhitespace(sb, schemaName, "schema_name");
+            AppendIfNotNull(sb, templateId, "template_id");
+            AppendIfNotNull(sb, burned);
+            AppendIfNotEmptyOrWhitespace(sb, owner);
+            AppendIfNotEmptyOrWhitespace(sb, match);
+            AppendIfNotEmptyOrWhitespace(sb, search);
+            AppendIfNotEmptyOrWhitespace(sb, matchImmutableName, "match_immutable_name");
+            AppendIfNotEmptyOrWhitespace(sb, matchMutableName, "match_mutable_name");
+            AppendIfNotNull(sb, isTransferable, "is_transferable");
+            AppendIfNotNull(sb, isBurnable, "is_burnable");
+            AppendIfNotEmpty(sb, collectionBlacklist, "collection_blacklist");
+            AppendIfNotEmpty(sb, collectionWhitelist, "collection_whitelist");
+            AppendIfNotEmpty(sb, ids);
+            AppendIfNotNull(sb, lowerBound, "lower_bound");
+            AppendIfNotNull(sb, upperBound, "upper_bound");
+            AppendIfNotNull(sb, before);
+            AppendIfNotNull(sb, after);
+
+            if (order != "asc" && order != "desc")
+            {
+                throw new ArgumentException("Must be 'asc' or 'desc'", nameof(order));
+            }
+            else
+            {
+                sb.Append("&order=");
+                sb.Append(order);
+            }
+
+            switch (sort)
+            {
+                case "created":
+                case "updated":
+                case "sale_id":
+                case "price":
+                case "template_mint":
+                    sb.Append("&sort=");
+                    sb.Append(sort);
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(sort));
+            }
+
+            return ExecuteGetListRequest<Sale>(sb.ToString(), maxPages);
+        }
+
+        /// <inheritdoc>
+        public Task<List<Sale>> GetSalesByTemplate(
+            string symbol,
+            decimal? minPrice = null,
+            decimal? maxPrice = null,
+            string? collectionName = null,
+            string? schemaName = null,
+            int? templateId = null,
+            bool? burned = null,
+            string? owner = null,
+            string? match = null,
+            string? search = null,
+            string? matchImmutableName = null,
+            string? matchMutableName = null,
+            bool? isTransferable = null,
+            bool? isBurnable = null,
+            ICollection<string>? collectionBlacklist = null,
+            ICollection<string>? collectionWhitelist = null,
+            ICollection<int>? ids = null,
+            int? lowerBound = null,
+            int? upperBound = null,
+            DateTimeOffset? before = null,
+            DateTimeOffset? after = null,
+            string? order = "desc",
+            string? sort = "template_id",
+            int maxPages = 0)
+        {
+            var sb = new StringBuilder("/atomicmarket/v1/sales/templates?", 150);
+
+            AppendIfNotEmptyOrWhitespace(sb, symbol);
+            AppendIfNotNull(sb, minPrice, "min_price");
+            AppendIfNotNull(sb, maxPrice, "max_price");
+            AppendIfNotEmptyOrWhitespace(sb, collectionName, "collection_name");
+            AppendIfNotEmptyOrWhitespace(sb, schemaName, "schema_name");
+            AppendIfNotNull(sb, templateId, "template_id");
+            AppendIfNotNull(sb, burned);
+            AppendIfNotEmptyOrWhitespace(sb, owner);
+            AppendIfNotEmptyOrWhitespace(sb, match);
+            AppendIfNotEmptyOrWhitespace(sb, search);
+            AppendIfNotEmptyOrWhitespace(sb, matchImmutableName, "match_immutable_name");
+            AppendIfNotEmptyOrWhitespace(sb, matchMutableName, "match_mutable_name");
+            AppendIfNotNull(sb, isTransferable, "is_transferable");
+            AppendIfNotNull(sb, isBurnable, "is_burnable");
+            AppendIfNotEmpty(sb, collectionBlacklist, "collection_blacklist");
+            AppendIfNotEmpty(sb, collectionWhitelist, "collection_whitelist");
+            AppendIfNotEmpty(sb, ids);
+            AppendIfNotNull(sb, lowerBound, "lower_bound");
+            AppendIfNotNull(sb, upperBound, "upper_bound");
+            AppendIfNotNull(sb, before);
+            AppendIfNotNull(sb, after);
+
+            if (order != "asc" && order != "desc")
+            {
+                throw new ArgumentException("Must be 'asc' or 'desc'", nameof(order));
+            }
+            else
+            {
+                sb.Append("&order=");
+                sb.Append(order);
+            }
+
+            switch (sort)
+            {
+                case "template_id":
+                case "price":
+                    sb.Append("&sort=");
+                    sb.Append(sort);
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(sort));
+            }
+
+            return ExecuteGetListRequest<Sale>(sb.ToString(), maxPages);
+        }
+
         private static void AppendIfNotEmptyOrWhitespace(StringBuilder sb, string? value, [CallerArgumentExpression("value")] string? paramName = null)
         {
             if (!string.IsNullOrWhiteSpace(value))
@@ -506,6 +700,17 @@
                 sb.Append('&');
                 sb.Append(paramName);
                 sb.Append(value.Value ? "=true" : "=false");
+            }
+        }
+
+        private static void AppendIfNotNull(StringBuilder sb, decimal? value, [CallerArgumentExpression("value")] string? paramName = null)
+        {
+            if (value != null)
+            {
+                sb.Append('&');
+                sb.Append(paramName);
+                sb.Append('=');
+                sb.Append(value.Value.ToString(CultureInfo.InvariantCulture));
             }
         }
     }

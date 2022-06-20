@@ -117,6 +117,35 @@ namespace AtomicAssetsClient.Data {
         ///   Looks up a localized string similar to {
         ///  &quot;success&quot;: true,
         ///  &quot;data&quot;: {
+        ///    &quot;market_contract&quot;: &quot;atomicmarket&quot;,
+        ///    &quot;assets_contract&quot;: &quot;atomicassets&quot;,
+        ///    &quot;sale_id&quot;: &quot;123456&quot;,
+        ///    &quot;seller&quot;: &quot;jnxau.wam&quot;,
+        ///    &quot;buyer&quot;: &quot;test-test&quot;,
+        ///    &quot;offer_id&quot;: &quot;125012&quot;,
+        ///    &quot;price&quot;: {
+        ///      &quot;token_contract&quot;: &quot;eosio.token&quot;,
+        ///      &quot;token_symbol&quot;: &quot;WAX&quot;,
+        ///      &quot;token_precision&quot;: 8,
+        ///      &quot;median&quot;: null,
+        ///      &quot;amount&quot;: &quot;60000000000&quot;
+        ///    },
+        ///    &quot;listing_price&quot;: &quot;60000000000&quot;,
+        ///    &quot;listing_symbol&quot;: &quot;WAX&quot;,
+        ///    &quot;assets&quot;: [
+        ///      {
+        ///        &quot;contract&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string GetSale {
+            get {
+                return ResourceManager.GetString("GetSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;success&quot;: true,
+        ///  &quot;data&quot;: {
         ///    &quot;contract&quot;: &quot;atomicassets&quot;,
         ///    &quot;schema_name&quot;: &quot;awards&quot;,
         ///    &quot;format&quot;: [
