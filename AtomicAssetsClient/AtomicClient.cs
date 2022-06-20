@@ -392,7 +392,7 @@
 
         /// <inheritdoc>
         public Task<List<Sale>> GetSales(
-            ICollection<int>? state = null,
+            ICollection<SaleState>? state = null,
             int? maxAssets = null,
             int? minAssets = null,
             bool? showSellerContract = null,
@@ -435,7 +435,11 @@
         {
             var sb = new StringBuilder("/atomicmarket/v2/sales?", 150);
 
-            AppendIfNotEmpty(sb, state);
+            if (state != null)
+            {
+                AppendIfNotEmpty(sb, state.Cast<int>().ToArray());
+            }
+
             AppendIfNotNull(sb, maxAssets, "max_assets");
             AppendIfNotNull(sb, minAssets, "min_assets");
             AppendIfNotNull(sb, showSellerContract, "show_seller_contracts");

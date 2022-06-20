@@ -50,7 +50,7 @@
             Assert.Equal(new DateTimeOffset(2020, 8, 19, 5, 25, 12, TimeSpan.Zero), item.CreatedAtTime);
             Assert.Equal(72767728, item.CreatedAtBlock);
 
-            Assert.Equal(2, item.State);
+            Assert.Equal(SaleState.Cancelled, item.State);
         }
     }
 }

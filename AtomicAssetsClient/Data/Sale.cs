@@ -45,7 +45,7 @@ namespace AtomicAssetsClient.Data
 
         public long CreatedAtBlock { get; set; }
 
-        public int State { get; set; }
+        public SaleState State { get; set; }
 
         public class SalePrice
         {

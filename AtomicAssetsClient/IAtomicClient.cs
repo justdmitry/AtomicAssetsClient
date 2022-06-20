@@ -248,7 +248,7 @@ namespace AtomicAssetsClient
         /// <summary>
         /// Get all sales.
         /// </summary>
-        /// <param name="state">Filter by sale state (0: WAITING - Sale created but offer was not send yet, 1: LISTED - Assets for sale, 2: CANCELED - Sale was canceled, 3: SOLD - Sale was bought4: INVALID - Sale is still listed but offer is currently invalid (can become valid again if the user owns all assets again)).</param>
+        /// <param name="state">Filter by sale state (0: WAITING - Sale created but offer was not send yet, 1: LISTED - Assets for sale, 2: CANCELED - Sale was canceled, 3: SOLD - Sale was bought, 4: INVALID - Sale is still listed but offer is currently invalid (can become valid again if the user owns all assets again)).</param>
         /// <param name="maxAssets">Max assets per listing.</param>
         /// <param name="minAssets">Min assets per listing.</param>
         /// <param name="showSellerContract">If false no seller contracts are shown except if they are in the contract whitelist.</param>
@@ -289,7 +289,7 @@ namespace AtomicAssetsClient
         /// <param name="sort">Column to sort. Available values: "created", "updated", "sale_id", "price", "template_mint".</param>
         /// <param name="maxPages">Maxmimum number of pages (of size <see cref="AtomicClientOptions.PageSize" /> to return. Zero (0) means "all".</param>
         Task<List<Sale>> GetSales(
-            ICollection<int>? state = null,
+            ICollection<SaleState>? state = null,
             int? maxAssets = null,
             int? minAssets = null,
             bool? showSellerContract = null,
