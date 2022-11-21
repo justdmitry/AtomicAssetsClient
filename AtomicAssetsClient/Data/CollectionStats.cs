@@ -2,9 +2,9 @@
 {
     public class CollectionStats
     {
-        public long Assets { get; set; }
+        public long? Assets { get; set; }
 
-        public long Burned { get; set; }
+        public long? Burned { get; set; }
 
         public int Templates { get; set; }
 
